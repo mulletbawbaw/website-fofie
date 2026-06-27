@@ -33,7 +33,7 @@ export const PT: Translation = {
     promoTag: "Promo de abertura",
     chibiTag: "Mais em conta",
     promo:
-      "Os 6 primeiros clientes pagam esses valores. Depois disso, corpo inteiro a partir de R$80.",
+      "Os 6 primeiros clientes pagam esses valores. Depois disso, corpo inteiro a partir de R$80. O preço pode variar conforme a quantidade de detalhes e complexidade.",
     addonsTitle: "Adicionais",
     payTitle: "Pagamento",
     payText:
