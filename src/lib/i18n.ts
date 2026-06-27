@@ -130,7 +130,7 @@ export const EN: Translation = {
     promoTag: "Launch promo",
     chibiTag: "More affordable",
     promo:
-      "The first 6 clients pay these prices. After that, full body starts at R$80.",
+      "The first 6 clients pay these prices. After that, full body starts at R$80. The price may vary depending on the amount of detail and complexity.",
     addonsTitle: "Add-ons",
     payTitle: "Payment",
     payText:

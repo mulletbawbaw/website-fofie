@@ -248,13 +248,20 @@ img {
 
 /* ── Gallery grid ──────────────────────────────────────────── */
 .gallery-grid {
-  columns: 240px 4;
+  columns: 4;
   column-gap: 16px;
+  width: 100%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 880px) {
   .gallery-grid {
-    columns: 160px 2;
+    columns: 3;
+  }
+}
+
+@media (max-width: 580px) {
+  .gallery-grid {
+    columns: 2;
     column-gap: 12px;
   }
 }

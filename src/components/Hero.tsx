@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Translation } from "@/types";
-import { DISCORD_SERVER_URL } from "@/lib/i18n";
+import { DISCORD_USER_URL } from "@/lib/i18n";
 
 interface HeroProps {
   t: Translation;
@@ -132,7 +132,7 @@ export function Hero({ t }: HeroProps) {
               <span style={{ fontSize: 18 }}>↓</span>
             </a>
             <a
-              href={DISCORD_SERVER_URL}
+              href={DISCORD_USER_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
@@ -145,20 +145,20 @@ export function Hero({ t }: HeroProps) {
         {/* Mascot */}
         <div
           style={{
-            flex: "0 1 440px",
+            flex: "0 1 500px",
             minWidth: 260,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             position: "relative",
-            minHeight: 340,
+            minHeight: 380,
           }}
         >
           <div
             style={{
               position: "absolute",
-              width: "clamp(280px,34vw,420px)",
-              height: "clamp(280px,34vw,420px)",
+              width: "clamp(240px,30vw,380px)",
+              height: "clamp(240px,30vw,380px)",
               borderRadius: "50%",
               background:
                 "radial-gradient(circle,rgba(196,110,240,.45),transparent 60%)",
@@ -168,8 +168,8 @@ export function Hero({ t }: HeroProps) {
           <div
             style={{
               position: "absolute",
-              width: "clamp(300px,36vw,460px)",
-              height: "clamp(300px,36vw,460px)",
+              width: "clamp(310px,44vw,530px)",
+              height: "clamp(310px,44vw,530px)",
               border: "1.5px dashed rgba(196,110,240,.3)",
               borderRadius: "50%",
               animation: "spinSlow 40s linear infinite",
@@ -178,12 +178,12 @@ export function Hero({ t }: HeroProps) {
           <Image
             src="/images/icone-completo-fofie.png"
             alt="fofie mascot"
-            width={400}
-            height={400}
+            width={500}
+            height={500}
             priority
             style={{
               position: "relative",
-              width: "clamp(240px,32vw,400px)",
+              width: "clamp(260px,38vw,460px)",
               height: "auto",
               animation: "floaty 5s ease-in-out infinite",
               filter: "drop-shadow(0 20px 40px rgba(196,110,240,.5))",

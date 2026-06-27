@@ -41,7 +41,7 @@ export function Contact({ t, lang }: ContactProps) {
     : lang === "pt" ? "Copiar ID" : "Copy ID";
 
   return (
-    <section id="contato" style={{ maxWidth: 1000 }} className="section-wrap">
+    <section id="contato" className="section-wrap">
       <RevealDiv className="section-header reveal">
         <p className="eyebrow">{t.contact.eyebrow}</p>
         <h2 className="section-title">{t.contact.title}</h2>

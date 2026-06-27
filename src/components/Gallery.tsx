@@ -41,7 +41,7 @@ export function Gallery({ t }: GalleryProps) {
               width={480}
               height={480}
               loading="lazy"
-              sizes="(max-width: 640px) 50vw, (max-width: 1100px) 25vw, 280px"
+              sizes="(max-width: 580px) 50vw, (max-width: 880px) 33vw, 25vw"
               style={{ width: "100%", height: "auto", display: "block" }}
               quality={80}
             />

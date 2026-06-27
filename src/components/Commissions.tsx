@@ -45,6 +45,9 @@ export function Commissions({ t }: CommissionsProps) {
           <CardDesc>{t.comm.normalDesc}</CardDesc>
           <PriceList rows={normalRows} />
           <PromoNote>{t.comm.promo}</PromoNote>
+          <p style={{ margin: "16px 0 0", fontSize: 13, lineHeight: 1.5, color: "#b6a6cf" }}>
+            {t.comm.chibiNote}
+          </p>
         </RevealDiv>
 
         {/* Chibi style */}
