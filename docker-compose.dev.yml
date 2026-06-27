@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      target: deps
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      NEXT_TELEMETRY_DISABLED: "1"
+    volumes:
+      # código-fonte com hot reload
+      - .:/app
+      # preserva node_modules e .next do container (não sobrescreve com o do host)
+      - /app/node_modules
+      - /app/.next
+    restart: "no"

@@ -1,0 +1,41 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Dependências (reinstaladas no build)
+node_modules
+
+# Build output (gerado dentro do container)
+.next
+out
+dist
+
+# Arquivos de desenvolvimento
+.env.local
+.env.development.local
+.env.test.local
+
+# Docker (não precisa de si mesmo)
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Editor e OS
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Docs
+README.md
+
+# Arquivos do projeto original (não fazem parte do Next.js)
+uploads
+support.js
+image-slot.js
+*.dc.html
+.thumbnail
+website-fofie
