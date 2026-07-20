@@ -4,7 +4,7 @@ import { useState, useCallback } from "react";
 import type { Lang } from "@/types";
 import { TRANSLATIONS } from "@/lib/i18n";
 
-export function useLanguage(defaultLang: Lang = "pt") {
+export function useLanguage(defaultLang: Lang = "en") {
   const [lang, setLang] = useState<Lang>(defaultLang);
 
   const toggle = useCallback(() => {

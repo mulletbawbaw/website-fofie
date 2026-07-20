@@ -1,4 +1,4 @@
-import type { Translation } from "@/types";
+import type { Lang, Translation } from "@/types";
 
 export const PT: Translation = {
   nav: {
@@ -33,7 +33,7 @@ export const PT: Translation = {
     promoTag: "Promo de abertura",
     chibiTag: "Mais em conta",
     promo:
-      "Os 6 primeiros clientes pagam esses valores. Depois disso, corpo inteiro a partir de R$80. O preço pode variar conforme a quantidade de detalhes e complexidade.",
+      "Os 6 primeiros clientes pagam esses valores. Depois disso, corpo inteiro a partir de R$ 80,00. O preço pode variar conforme a quantidade de detalhes e complexidade.",
     addonsTitle: "Adicionais",
     payTitle: "Pagamento",
     payText:
@@ -41,7 +41,7 @@ export const PT: Translation = {
     payTag1: "50% para começar",
     payTag2: "50% na entrega",
     addons: [
-      { label: "Cenário detalhado", price: "+R$20" },
+      { label: "Cenário detalhado", price: "+R$ 20,00" },
       { label: "+1 personagem", price: "+40%" },
     ],
   },
@@ -130,7 +130,7 @@ export const EN: Translation = {
     promoTag: "Launch promo",
     chibiTag: "More affordable",
     promo:
-      "The first 6 clients pay these prices. After that, full body starts at R$80. The price may vary depending on the amount of detail and complexity.",
+      "The first 6 clients pay these prices. After that, full body starts at $80. The price may vary depending on the amount of detail and complexity.",
     addonsTitle: "Add-ons",
     payTitle: "Payment",
     payText:
@@ -138,7 +138,7 @@ export const EN: Translation = {
     payTag1: "50% to start",
     payTag2: "50% on delivery",
     addons: [
-      { label: "Detailed background", price: "+R$20" },
+      { label: "Detailed background", price: "+$20" },
       { label: "+1 character", price: "+40%" },
     ],
   },
@@ -213,14 +213,11 @@ export const DISCORD_SERVER_URL = "https://discord.gg/HNdCkXmvE";
 export const DISCORD_USER_URL = "https://discord.com/users/1348349005855199432";
 export const TWITTER_URL = "https://x.com/fofiexp?s=11";
 
-export const NORMAL_ROWS = [
-  { label: "Ícone", price: "R$25" },
-  { label: "Busto", price: "R$35" },
-  { label: "Corpo inteiro", price: "R$60" },
-] as const;
+export function formatPrice(lang: Lang, amount: number): string {
+  return lang === "en"
+    ? `$${amount}`
+    : `R$ ${amount.toFixed(2).replace(".", ",")}`;
+}
 
-export const CHIBI_ROWS = [
-  { label: "Ícone", price: "R$15" },
-  { label: "Busto", price: "R$20" },
-  { label: "Corpo inteiro", price: "R$30" },
-] as const;
+export const NORMAL_PRICE_VALUES = [25, 35, 60] as const;
+export const CHIBI_PRICE_VALUES = [15, 20, 30] as const;

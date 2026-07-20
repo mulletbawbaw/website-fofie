@@ -12,7 +12,7 @@ import { Terms } from "@/components/Terms";
 import { Footer } from "@/components/Footer";
 
 export default function HomePage() {
-  const { lang, toggle, t } = useLanguage("pt");
+  const { lang, toggle, t } = useLanguage("en");
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function HomePage() {
       <div id="topo" style={{ position: "relative", zIndex: 1 }}>
         <Header t={t} lang={lang} onToggleLang={toggle} />
         <Hero t={t} />
-        <Commissions t={t} />
+        <Commissions t={t} lang={lang} />
         <HowToOrder t={t} />
         <Gallery t={t} />
         <Contact t={t} lang={lang} />

@@ -1,25 +1,24 @@
 import Image from "next/image";
-import type { Translation } from "@/types";
+import type { Lang, Translation } from "@/types";
 import { RevealDiv } from "@/components/RevealDiv";
+import { NORMAL_PRICE_VALUES, CHIBI_PRICE_VALUES, formatPrice } from "@/lib/i18n";
 
 interface CommissionsProps {
   t: Translation;
+  lang: Lang;
 }
 
-const NORMAL_PRICES = ["R$25", "R$35", "R$60"] as const;
-const CHIBI_PRICES = ["R$15", "R$20", "R$30"] as const;
-
-export function Commissions({ t }: CommissionsProps) {
+export function Commissions({ t, lang }: CommissionsProps) {
   const rowKeys = ["icon", "bust", "full"] as const;
 
   const normalRows = rowKeys.map((key, i) => ({
     label: t.comm.rows[key],
-    price: NORMAL_PRICES[i],
+    price: formatPrice(lang, NORMAL_PRICE_VALUES[i]),
   }));
 
   const chibiRows = rowKeys.map((key, i) => ({
     label: t.comm.rows[key],
-    price: CHIBI_PRICES[i],
+    price: formatPrice(lang, CHIBI_PRICE_VALUES[i]),
   }));
 
   return (
